@@ -1,17 +1,16 @@
-import { add, mul } from "../src/calc";
+import { isPalindrome } from "../src/calc";
 
-describe("test add function", () => {
-  it("should return 15 for add(10,5)", () => {
-    expect(add(10, 5)).toBe(15);
+describe("test palindrome", () => {
+  it("should return true if string palindrom", () => {
+    const isPalin = isPalindrome("malam");
+    expect(isPalin).toBe(true);
   });
-
-  it("should return 5 for add(2,3)", () => {
-    expect(add(2, 3)).toBe(5);
+  it("should return false if string not palindrom", () => {
+    const isNotPalin = isPalindrome("siang");
+    expect(isNotPalin).toBe(false);
   });
-});
-
-describe("test mul function", () => {
-  it("should return 15 for mul(3,5)", () => {
-    expect(mul(3, 5)).toBe(15);
+  it("should return true if string palindrom", () => {
+    const isNotPalin = isPalindrome("kaSur rusak");
+    expect(isNotPalin).toBe(true);
   });
 });
